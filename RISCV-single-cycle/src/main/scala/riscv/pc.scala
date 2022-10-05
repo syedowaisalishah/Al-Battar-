@@ -8,7 +8,7 @@ class pcIO extends Bundle{
 }
 class pc extends Module {
     val io = IO (new pcIO())
-    val reg = RegInit(0.U(4.W))
+    val reg = RegInit(0.U(32.W))
     reg:=io.addr
     io.pc_out:=reg
     io.pc_out4:=reg + 4.U
