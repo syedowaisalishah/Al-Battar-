@@ -24,7 +24,7 @@ Each instruction's hexadecimal code must be on seperate line as following. This 
 ```
 Then perform the following step
 ```
-cd RISCV-single-cycle\src\main\scala\controler
+cd RISCV-single-cycle\main\scala\riscv
 ```
 Open **InstructionMem.scala** with this command. You can also manually go into the above path and open the file in your favorite text editor.
 ```ruby
@@ -32,13 +32,15 @@ open InstructionMem.scala
 ```
 Find the following line
 ``` python
-loadMemoryFromFile(mem, "C:/Users/F I ENTERPRISES/Music/file.txt")
+loadMemoryFromFile(mem, "/home/owais/Music/Al-Battar--main/RISCV-single-cycle/src/main/scala/riscv/file.txt")
 ```
 Change the .txt file path to match your file that you created above storing your own program instructions. or you can also use this file\
 After setting up the InstructionMem.scala file, go inside the RV32i folder.
 ```ruby
 cd Single-Cycle-CPU/RV32i
 ```
+
+
 And enter
 ```ruby
 sbt
@@ -49,7 +51,7 @@ sbt:RISCV-single-cycle>
 ```
 Enter this command
 ```ruby
-sbt:RISCV-single-cycle> testOnly controler.toptest -- -DwriteVcd=1
+sbt:RISCV-single-cycle> testOnly riscv.toptest -- -DwriteVcd=1
 ```
 
 After success you will get a folder ***test_run_dir*** on root of your folder. Go into the examples folder inside.\
