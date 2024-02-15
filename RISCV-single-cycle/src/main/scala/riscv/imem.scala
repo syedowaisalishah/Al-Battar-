@@ -9,5 +9,5 @@ class imem extends Module{
     })
     val mem=Mem(32,UInt(32.W))
     io.readdata :=mem(io.address)
-    loadMemoryFromFile(mem,"C:/Users/F I ENTERPRISES/Music/file.txt")
+    loadMemoryFromFile(mem,"/home/owais/Music/Al-Battar--main/RISCV-single-cycle/src/main/scala/riscv/file.txt")
 }
